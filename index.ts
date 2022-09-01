@@ -1,9 +1,12 @@
 import express from 'express';
 
+import { s78 } from './src'; 
+
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Que te pasa calabaza?");
+app.post("/", (req, res) => {
+  console.log(req.body);
+  res.send(s78("Vamo lakd"));
 })
 
 const port = process.env.PORT || 3001;
